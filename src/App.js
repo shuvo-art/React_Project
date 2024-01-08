@@ -1,17 +1,12 @@
 import React from "react"
-import ReactDOM from "react-dom"
-import Header from "./components/Header"
-import Footer from "./components/Footer"
-import MainComponent from "./components/MainComponent"
-import logo from './logo.svg';
-import './style.css';
+import Navbar from "./components/Navbar"
+import Main from "./components/Main"
 
 function App() {
   return (
-      <div>
-          <Header />
-          <MainComponent />
-          <Footer />
+      <div className="container">
+          <Navbar />
+          <Main />
       </div>
   )
 }
