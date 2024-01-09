@@ -1,37 +1,4 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-logo {
-  width: 40px;
-}
-
-.nav-items {
-  list-style: none;
-  display: flex;
-}
-
-.nav-items > li {
-  padding: 10px;
-} */
-
-* {
+/* * {
   box-sizing: border-box;
 }
 
@@ -74,7 +41,7 @@ nav {
 main {
   padding: 57px 27px;
   color: #fff;
-  background-image: url(./images/reactjs-icon 2.png );
+  background-image: url(./images/reactjs-icon 2.png);
   background-repeat: no-repeat;
   background-position: right 75%; 
 }
@@ -97,18 +64,72 @@ main {
 .main--facts > li::marker{
   color: #61dafb;
   font-size: 1.4em;
+} */
+
+* {
+  box-sizing: border-box;
 }
 
-.card-sub-title {
+body {
+  margin: 0;
   font-family: Inter, sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 15px;
-  letter-spacing: 0em;
 }
 
-.social-icons {
+.navbar {
+  box-shadow: 0px 2.9825618267059326px 7.456404209136963px 0px #0000001A;
+  background: #FFFFFF;
+  height: 70px;
+  display: flex;
+  padding: 20px 36px;
+}
+
+.grey {
+  color: #918E9B;
+}
+
+.navbar_logo {
+  max-width: 100px;
+}
+
+section {
+  padding: 20px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero--photo {
+  max-width: 400px;
+  align-self: center;
+}
+
+.hero--header {
+  margin-bottom: 16px;
+}
+
+.hero--text {
+  margin-top: 0;
+}
+
+.card {
+  width: 175px;
+  font-size: 12px;
+}
+
+.card--image {
+  width: 100%;
+  border-radius: 9px;
+} 
+
+.card--stats {
   display: flex;
   align-items: center;
-  justify-content:space-evenly;
 }
+
+.card--star {
+  height: 14px;
+}
+
+
