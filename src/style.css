@@ -132,4 +132,49 @@ section {
   height: 14px;
 }
 
+.card-container { 
+  display: flex;
+  flex-Wrap: wrap;
+  justify-self: space-between; 
+  } 
+
+.card {
+  width: calc(25% - 20px);
+  margin: 10px; 
+  border: 1px solid #ccc;
+  border-Radius: 8px;
+  box-Shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  padding: 20px; 
+  display: inline-flexbox;
+}
+
+.contact-card--image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.info-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 8px;
+}
+
+.contact-card--icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+  .card {
+    width: calc(100% - 20px); /* For mobile, 1 card in a row */
+  }
+}
+
+
 
