@@ -8,11 +8,13 @@ import Joke from "./components/Joke"
 import NewJoke from "./components/NewJoke"
 import NewJokesData from "./NewJokesData"
 import Data from "./Data"
+import Data1 from "./Data1"
 
 import chomok from "./images/chomok.jpg"
 import shuvo from "./images/shuvo_fb1.jpg"
 import shanto from "./images/shanto.jpg"
 import sagor from "./images/sagor.jpg"
+import NewCard from "./components/Newcard"
 
 const App = () => {
   const athlete = "https://picsum.photos/200/300"
@@ -23,20 +25,25 @@ const App = () => {
         punchline={joke.punchline} />
     )
   })
+
   const dataElement = Data.map(data => {
     return (
       <Card 
         key={data.id}
-        img={data.coverImg}
-        rating={data.status.rating}
-        reviewCount={data.status.reviewCount}
-        location={data.location}
-        title={data.title}
-        price={data.price}
-        openSpots={data.openSpots}
-        />
+        data={data}   /* {...data} is another technique where data not used after props in card component*/
+      />
     )
   })
+
+  const cardElement = Data1.map(data => {
+    return (
+      <NewCard
+        key = {data.id}
+        data = {data} 
+      />
+    )
+  })
+
   return (
       <div className="container">
           <Navbar />
@@ -112,7 +119,12 @@ const App = () => {
               />
 
           </section>
+
           {jokesElement}
+
+          <section className="new-card-list">
+            {cardElement}
+          </section>
 
       </div>
   )
