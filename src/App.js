@@ -7,6 +7,7 @@ import Contact from "./components/Contact"
 import Joke from "./components/Joke"
 import NewJoke from "./components/NewJoke"
 import NewJokesData from "./NewJokesData"
+import Data from "./Data"
 
 import chomok from "./images/chomok.jpg"
 import shuvo from "./images/shuvo_fb1.jpg"
@@ -22,18 +23,29 @@ const App = () => {
         punchline={joke.punchline} />
     )
   })
+  const dataElement = Data.map(data => {
+    return (
+      <Card 
+        key={data.id}
+        img={data.coverImg}
+        rating={data.status.rating}
+        reviewCount={data.status.reviewCount}
+        location={data.location}
+        title={data.title}
+        price={data.price}
+        openSpots={data.openSpots}
+        />
+    )
+  })
   return (
       <div className="container">
           <Navbar />
           <Hero />
-          <Card 
-              img={athlete}
-              rating="5.0"
-              reviewCount={6}
-              country="USA"
-              title="Life lessons with Katie Zaferes"
-              price={136}
-              />
+
+          <section className="card-list">
+            {dataElement}
+          </section>
+
           <Dynamic />
           <Joke 
             setup="If you want a simple, thorough roadmap for how to start a blog."
@@ -67,39 +79,38 @@ const App = () => {
             downvotes={3}
             comments=""
             />
-          <section>
-             <div className="card-containar">
+          <section className="card-list">
               <Contact
                 img={chomok}
                 name="A.B.Chomok"
                 phone="(212) 555-1234"
                 email="mr.chomok@gmail.com"
               />
-          </div>
-          <div className="card-containar">
+
+
              <Contact 
                 img={shuvo}
                 name="Hassan Shuvo"
                 phone="(212) 555-4567"
                 email="mr.shuvo@gmail.com"
               />
-          </div>
-          <div className="card-containar">
+
+
               <Contact 
                 img={shanto}
                 name="Hasibul Hasan Shanto"
                 phone="(212) 555-1245"
                 email="mr.shanto@gmail.com"
               />
-          </div>
-          <div className="card-containar">
+
+
               <Contact 
                 img={sagor}
                 name="Sagor Ahmed"
                 phone="(212) 555-1288"
                 email="mr.sagor@gmail.com"
               />
-          </div>
+
           </section>
           {jokesElement}
 

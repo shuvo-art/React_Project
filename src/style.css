@@ -116,22 +116,46 @@ section {
 .card {
   width: 175px;
   font-size: 12px;
+  flex: 0 0 auto;
+  display: inline-flex;
+  flex-direction: column;
+  margin: 0 10px;
+  position: relative;
 }
 
 .card--image {
   width: 100%;
   border-radius: 9px;
+  margin-bottom: 9px;
 } 
+
+.card--title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 .card--stats {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  margin-top: 8px;
 }
 
 .card--star {
   height: 14px;
 }
 
+.card--badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background-color: #FFFFFF;
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+/*
 .card-container { 
   display: flex;
   flex-Wrap: wrap;
@@ -145,7 +169,8 @@ section {
   border-Radius: 8px;
   box-Shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
   padding: 20px; 
-  display: inline-flexbox;
+  display: dlex;
+  flex-direction: column;
 }
 
 .contact-card--image {
@@ -169,12 +194,12 @@ section {
   margin-right: 10px;
 }
 
-/* Media query for mobile responsiveness */
+
 @media (max-width: 768px) {
   .card {
-    width: calc(100% - 20px); /* For mobile, 1 card in a row */
+    width: calc(100% - 20px); 
   }
 }
 
-
+*/
 
