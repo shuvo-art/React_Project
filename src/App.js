@@ -5,6 +5,8 @@ import Card from "./components/Card"
 import Dynamic from "./components/Dynamic"
 import Contact from "./components/Contact"
 import Joke from "./components/Joke"
+import NewJoke from "./components/NewJoke"
+import NewJokesData from "./NewJokesData"
 
 import chomok from "./images/chomok.jpg"
 import shuvo from "./images/shuvo_fb1.jpg"
@@ -13,6 +15,13 @@ import sagor from "./images/sagor.jpg"
 
 const App = () => {
   const athlete = "https://picsum.photos/200/300"
+  const jokesElement = NewJokesData.map(joke => {
+    return (
+      <NewJoke
+        setup={joke.setup}
+        punchline={joke.punchline} />
+    )
+  })
   return (
       <div className="container">
           <Navbar />
@@ -92,6 +101,7 @@ const App = () => {
               />
           </div>
           </section>
+          {jokesElement}
 
       </div>
   )
