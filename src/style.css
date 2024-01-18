@@ -75,13 +75,30 @@ body {
   font-family: Inter, sans-serif;
 }
 
-.navbar {
+/* .navbar {
+  box-shadow: 0px 2.9825618267059326px 7.456404209136963px 0px #0000001A;
+  background: #FFFFFF;
+  height: 70px;
+  display: flex;
+  padding: 20px 36px;
+} */
+.dark-mode-navbar {
+  background-color: #222; /* Or your desired dark color */
+  color: #fff; /* Adjust text color if needed */
   box-shadow: 0px 2.9825618267059326px 7.456404209136963px 0px #0000001A;
   background: #FFFFFF;
   height: 70px;
   display: flex;
   padding: 20px 36px;
 }
+.light-mode {
+  box-shadow: 0px 2.9825618267059326px 7.456404209136963px 0px #0000001A;
+  background: #FFFFFF;
+  height: 70px;
+  display: flex;
+  padding: 20px 36px;
+}
+
 
 .grey {
   color: #918E9B;
@@ -207,4 +224,26 @@ section {
 }
 
 */
+.toggle-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.toggle-button {
+  background-color: #f5f5f5; /* Adjust as needed */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle-button.active {
+  background-color: #222; /* Adjust for active state */
+  color: #fff;
+}
+
+.dark-mode {
+  background-color: #222; /* Or your desired dark color */
+  color: #fff; /* Adjust text color if needed */
+}

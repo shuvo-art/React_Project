@@ -17,7 +17,13 @@ import sagor from "./images/sagor.jpg"
 import NewCard from "./components/Newcard"
 
 const App = () => {
-  const athlete = "https://picsum.photos/200/300"
+  const [isToggled, setIsToggled] = React.useState(false); // Initial state is false
+
+  function handleToggle() {
+    // ... toggle logic here
+    setIsToggled(prevToggle => !prevToggle);
+  }
+
   const jokesElement = NewJokesData.map(joke => {
     return (
       <NewJoke
@@ -45,8 +51,10 @@ const App = () => {
   })
 
   return (
-      <div className="container">
-          <Navbar />
+      <div className={isToggled ? 'dark-mode' : ''}>
+
+          <Navbar isToggled={isToggled} onToggle={handleToggle} />
+
           <Hero />
 
           <section className="card-list">
